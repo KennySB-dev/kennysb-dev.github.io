@@ -1,0 +1,9 @@
+@use '../abstracts/index' as *;
+
+.about__container {
+  row-gap: 3.2rem;
+  text-align: center;
+}
+.about__subtitle {
+  margin-bottom: $mb-2;
+}

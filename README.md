@@ -15,7 +15,7 @@ Skills Page
 
 ![image](https://github.com/KennySB-dev/kennysb-dev.github.io/assets/120841550/f02f1ede-14c2-453b-943a-562f181a8265)
 
-Footer
+About Me Page & Footer
 
 ![image](https://github.com/KennySB-dev/kennysb-dev.github.io/assets/120841550/b7ba9151-fda3-4483-b7f8-03dc3117d0d7)
 

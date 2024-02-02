@@ -1,5 +1,5 @@
-# Kenny Dev Website
-This is a website I made for myself to display my skills and who I am.
+# KennyDEV Website
+This is a website to show my skills, projects and some other information about me!
 
 ## Images
 
@@ -24,3 +24,5 @@ Footer
 This website is licensed under Apache License Version 2.0 (ALv2). Feel free to use, modify, and distribute the code as per the terms of the license.
 
 Note: Please be aware that the assets featured on this website, specifically Poppins, and boxicons, are governed by licenses distinct from the website's own license. I strongly recommend reviewing the individual license terms for these resources separately.
+
+`Special thanks to PH7N for contributing on site & README.MD`

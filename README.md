@@ -1,5 +1,5 @@
-# KennyDEV Website
-This is a website to show my skills, projects and some other information about me!
+# <h1 align="center">KennyDev</h1>
+<p align="center">This is a website to show my skills, projects and some other information about me!</p>
 
 ## Images
 

@@ -1,0 +1,51 @@
+@use '../abstracts/index' as *;
+
+.menu-btn {
+  position: relative;
+  width: 35px;
+  height: 30px;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  &__icon {
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background-color: $secondary-color;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      content: '';
+      width: 30px;
+      height: 3px;
+      background-color: $secondary-color;
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out;
+    }
+    &::before {
+      transform: translateY(-8px);
+    }
+    &::after {
+      transform: translateY(8px);
+    }
+  }
+}
+
+// Animation
+.menu-btn.open .menu-btn__icon {
+  transform: translateX(-50px);
+  background: transparent;
+}
+.menu-btn.open .menu-btn__icon::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__icon::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}

@@ -1,87 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="theme-color" content="#6bb3eb">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kenny | DEV</title>
-    <meta property="og:title" content="Hey! I'm kenny 👋" />
-    <meta property="og:site_name" content="KennyDEV" />
-    <meta property="og:url" content="https://kenny.is-a.dev" />
-    <meta property="og:description" content="This is my personal website, including all  my projects, an about me, and contact info! :D" />
-    <meta property="og:image" content="https://kenny.is-a.dev/assets/images/kenny-profile.png" />
-    <meta property="og:image:secure_url" content="https://kenny.is-a.dev/assets/images/kenny-profile.png" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:alt" content="Kenny Bugeja" />
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="assets/css/tablet.css"
-      media="screen and (min-width: 55em)"
-    />
-    <link
-      rel="stylesheet"
-      href="assets/css/desktop.css"
-      media="screen and (min-width: 65em)"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-    />
-    <script defer src="main.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kenny | DEV</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/tablet.css" media="screen and (min-width: 55em)" />
+  <link rel="stylesheet" href="assets/css/desktop.css" media="screen and (min-width: 65em)" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+  <script defer src="main.js"></script>
+  <style>
+    /* Theme switcher container */
+    .theme-switcher {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-left: auto;
+    }
 
-  <body>
-    <!-- ===== HEADER ===== -->
-    <header class="header">
-      <nav class="nav bd-grid">
-        <div>
-          <h1 class="header__logo">
-            Kenny<span class="header__logo--light">DEV</span>
-          </h1>
-        </div>
-        <!-- ===== NAVIGATION ===== -->
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#home" class="nav__link"> Home </a>
-            </li>
-            <li class="nav__item">
-              <a href="#work" class="nav__link"> Work </a>
-            </li>
-            <li class="nav__item">
-              <a href="#skills" class="nav__link"> Skills </a>
-            </li>
-            <li class="nav__item">
-              <a href="#about" class="nav__link"> About </a>
-            </li>
-          </ul>
-        </div>
+    .theme-switcher input[type="checkbox"] {
+      display: none;
+    }
 
-        <button
-          class="menu-btn"
-          aria-label="Navigation menu"
-          aria-expanded="false"
-        >
-          <div class="menu-btn__icon"></div>
-        </button>
+    /* Slider */
+    .theme-switcher label {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
 
-        <!-- ===== THEME SWITCHER ===== -->
-        <div class="theme-switcher">
-          <input type="checkbox" id="theme-toggle" aria-label="Theme switcher">
-          <label for="theme-toggle">
-            <div class="slider"></div>
-            Dark Mode
-          </label>
-        </div>
+    .theme-switcher label .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 34px;
+    }
+
+    .theme-switcher label .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      border-radius: 50%;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+    }
+
+    input:checked + label .slider {
+      background-color: #2196F3;
+    }
+
+    input:checked + label .slider:before {
+      transform: translateX(26px);
+    }
+
+    /* Dark mode styles */
+    .dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <nav class="nav bd-grid">
+      <div>
+        <h1 class="header__logo">
+          Kenny<span class="header__logo--light">DEV</span>
+        </h1>
+      </div>
+      <!-- ===== NAVIGATION ===== -->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+        </ul>
+      </div>
+
+      <button class="menu-btn" aria-label="Navigation menu" aria-expanded="false">
+        <div class="menu-btn__icon"></div>
+      </button>
+
+      <!-- ===== THEME SWITCHER ===== -->
+      <div class="theme-switcher">
+        <input type="checkbox" id="theme-toggle" aria-label="Theme switcher">
+        <label for="theme-toggle">
+          <div class="slider"></div>
+          Dark Mode
+        </label>
+      </div>
+    </nav>
+  </header>
+
     <!-- ===== MAIN NAVIGATOR SECTIONS ===== -->
     <main>
       <section class="hero bd-grid" id="home">
@@ -279,24 +300,17 @@
       </section>
 
     <!--===== Footer =====-->
-    <footer class="footer" id="footer">
-      <div class="footer-content">
-        <p class="header__logo">
-          Kenny<span class="header__logo--light">DEV</span>
-        </p>
-
-        <div class="footer__social">
-          <a
-            href="https://discord.com/users/681811851428102145"
-            target="_blank"
-            ><i class="bx bxl-discord-alt footer__social-icon"></i
-          ></a>
-          <a href="https://github.com/KennySB-dev" target="_blank"
-            ><i class="bx bxl-github footer__social-icon"></i
-          ></a>
-        </div>
-        <p class="footer-description">Made with 🧡 by Kenny.</p>
+  <footer class="footer" id="footer">
+    <div class="footer-content">
+      <p class="header__logo">
+        Kenny<span class="header__logo--light">DEV</span>
+      </p>
+      <div class="footer__social">
+        <a href="https://discord.com/users/681811851428102145" target="_blank"><i class="bx bxl-discord-alt footer__social-icon"></i></a>
+        <a href="https://github.com/KennySB-dev" target="_blank"><i class="bx bxl-github footer__social-icon"></i></a>
       </div>
-    </footer>
-  </body>
+      <p class="footer-description">Made with 🧡 by Kenny.</p>
+    </div>
+  </footer>
+</body>
 </html>

@@ -87,11 +87,11 @@ img{max-width:100%;height:auto}
   --background-color: #ffffff;
   --text-color: #000000;
   --link-color: #6bb3eb;
-}
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
+  --header-background-color: #ffffff;
+  --footer-background-color: #0e2431;
+  --nav-link-color: #0e2431;
+  --scrollbar-thumb-color: #0571f8;
+  --wave-color: #0571f8;
 }
 
 /* Light theme styles */
@@ -103,17 +103,21 @@ body {
   --header-background-color: #ffffff;
   --footer-background-color: #0e2431;
   --nav-link-color: #0e2431;
+  --scrollbar-thumb-color: #0571f8;
+  --wave-color: #0571f8;
 }
 
 /* Dark theme styles */
 [data-theme='dark'] {
-  --primary-color: #6bb3eb;
+  --primary-color: #6a8ef9; /* Updated blue color */
   --background-color: #121212;
   --text-color: #ffffff;
-  --link-color: #6bb3eb;
+  --link-color: #6a8ef9; /* Updated blue color */
   --header-background-color: #000000;
-  --footer-background-color: #051b26;
-  --nav-link-color: #ffffff;
+  --footer-background-color: #051b26; /* Updated color */
+  --nav-link-color: #ffffff; /* Navigation links color in dark mode */
+  --scrollbar-thumb-color: #6a8ef9; /* Updated blue color for scrollbar */
+  --wave-color: #6a8ef9; /* Updated blue color for wave animation */
 }
 
 /* Example of using the theme colors */
@@ -139,13 +143,12 @@ a {
   color: var(--link-color);
 }
 
-/* Add styles for the theme switcher */
-.theme-switcher {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+/* Scrollbar styles */
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color);
 }
 
-.theme-switcher input {
-  cursor: pointer;
+/* Add styles for the wave animation */
+.wave {
+  color: var(--wave-color);
 }

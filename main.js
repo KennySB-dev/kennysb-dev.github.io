@@ -1,8 +1,7 @@
-
 const $menuBtn = document.querySelector('.menu-btn')
 const $navigator = document.getElementById('nav-menu')
 const $navLink = document.querySelectorAll('.nav__link')
-
+const $themeToggle = document.getElementById('theme-toggle')
 
 const toggleMenuBtn = () => {
   $menuBtn.classList.toggle('open')
@@ -17,7 +16,6 @@ const toggleMenuBtn = () => {
 
 $menuBtn.addEventListener('click', toggleMenuBtn)
 
-
 function linkAction() {
   $navLink.forEach((n) => n.classList.remove('active'))
   this.classList.add('active')
@@ -28,3 +26,22 @@ function linkAction() {
 }
 
 $navLink.forEach((n) => n.addEventListener('click', linkAction))
+
+// Theme switcher logic
+const setTheme = (theme) => {
+  document.documentElement.setAttribute('data-theme', theme)
+  localStorage.setItem('theme', theme)
+}
+
+$themeToggle.addEventListener('change', (e) => {
+  if (e.target.checked) {
+    setTheme('dark')
+  } else {
+    setTheme('light')
+  }
+})
+
+// Load the saved theme
+const savedTheme = localStorage.getItem('theme') || 'light'
+setTheme(savedTheme)
+$themeToggle.checked = savedTheme === 'dark'

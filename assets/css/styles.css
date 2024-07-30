@@ -83,15 +83,15 @@ img{max-width:100%;height:auto}
 
 /* Theme styles */
 :root {
-  --primary-color: #6bb3eb;
+  --primary-color: #6bb3eb; /* Default primary color */
   --background-color: #ffffff;
   --text-color: #000000;
-  --link-color: #6bb3eb;
+  --link-color: #6bb3eb; /* Default link color */
   --header-background-color: #ffffff;
-  --footer-background-color: #0e2431;
-  --nav-link-color: #0e2431;
-  --scrollbar-thumb-color: #0571f8;
-  --wave-color: #0571f8;
+  --footer-background-color: #0e2431; /* Default footer color */
+  --nav-link-color: #0e2431; /* Default nav link color */
+  --scrollbar-thumb-color: #0571f8; /* Default scrollbar color */
+  --wave-color: #0571f8; /* Default wave color */
 }
 
 /* Light theme styles */
@@ -143,11 +143,14 @@ a {
   color: var(--link-color);
 }
 
-/* Menu button (navigation button) color in dark mode */
-.menu-btn__icon,
+/* Navigation buttons color in dark mode */
+.menu-btn__icon {
+  background-color: var(--nav-link-color); /* Updated to white in dark mode */
+}
+
 .menu-btn__icon::before,
 .menu-btn__icon::after {
-  background-color: var(--nav-link-color); /* White color for dark mode */
+  background-color: var(--nav-link-color); /* Updated to white in dark mode */
 }
 
 /* Scrollbar styles */
@@ -158,4 +161,15 @@ a {
 /* Add styles for the wave animation */
 .wave {
   color: var(--wave-color);
+}
+
+/* Theme switcher styles */
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-switcher input {
+  cursor: pointer;
 }

@@ -1,6 +1,6 @@
 *,*::before,*::after{box-sizing:border-box}
 html{font-size:62.5%;scroll-behavior:smooth}
-body{margin:4.8rem 0 0 0;font-family:"Poppins",sans-serif;font-size:1.6rem;color:#0e2431;background-color:#fff}
+body{margin:4.8rem 0 0 0;font-family:"Poppins",sans-serif;font-size:1.6rem;color:#000;background-color:#fff}
 h1,h2,h3,p,figure{margin:0}
 ul{margin:0;padding:0;list-style:none}
 a{text-decoration:none}

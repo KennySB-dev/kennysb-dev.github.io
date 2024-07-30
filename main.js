@@ -44,4 +44,4 @@ $themeToggle.addEventListener('change', (e) => {
 // Load the saved theme
 const savedTheme = localStorage.getItem('theme') || 'light'
 setTheme(savedTheme)
-$themeToggle.checked = savedTheme === 'dark'
+$themeToggle.checked = savedTheme === 'dark';

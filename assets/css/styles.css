@@ -81,8 +81,8 @@ img{max-width:100%;height:auto}
 .footer__social-icon{margin:0 1.6rem;font-size:2.4rem;color:#fff}
 .footer-description{font-size:1.6rem}
 
-/* New Theme Switcher CSS */
-:root {
+/* New theme styles */
+root {
   --primary-color: #6bb3eb;
   --background-color: #ffffff;
   --text-color: #000000;
@@ -100,6 +100,8 @@ body {
   --background-color: #ffffff;
   --text-color: #000000;
   --link-color: #6bb3eb;
+  --header-background-color: #ffffff;
+  --footer-background-color: #0e2431;
 }
 
 /* Dark theme styles */
@@ -108,11 +110,22 @@ body {
   --background-color: #121212;
   --text-color: #ffffff;
   --link-color: #6bb3eb;
+  --header-background-color: #000000;
+  --footer-background-color: #041e87;
 }
 
 /* Example of using the theme colors */
 a {
   color: var(--link-color);
+}
+
+/* Header and Footer background colors */
+.header {
+  background-color: var(--header-background-color);
+}
+
+.footer {
+  background-color: var(--footer-background-color);
 }
 
 /* Add styles for the theme switcher */

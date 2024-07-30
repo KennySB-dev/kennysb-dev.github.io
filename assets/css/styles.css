@@ -120,6 +120,12 @@ img{max-width:100%;height:auto}
   --wave-color: #6a8ef9; /* Updated blue color for wave animation */
 }
 
+/* Apply theme colors to body */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
 /* Example of using the theme colors */
 a {
   color: var(--link-color);

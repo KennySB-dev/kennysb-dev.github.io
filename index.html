@@ -1,176 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta name="theme-color" content="#6bb3eb">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kenny | DEV</title>
-  <meta property="og:title" content="Hey! I'm Kenny 👋" />
-  <meta property="og:site_name" content="KennyDEV" />
-  <meta property="og:url" content="https://kenny.is-a.dev" />
-  <meta property="og:description" content="This is my personal website, including all my projects, an about me, and contact info! :D" />
-  <meta property="og:image" content="https://kenny.is-a.dev/assets/images/kenny-profile.png" />
-  <meta property="og:image:secure_url" content="https://kenny.is-a.dev/assets/images/kenny-profile.png" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:alt" content="Kenny Bugeja" />
-  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="stylesheet" href="assets/css/tablet.css" media="screen and (min-width: 55em)" />
-  <link rel="stylesheet" href="assets/css/desktop.css" media="screen and (min-width: 65em)" />
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
-  <style>
-    .switch {
-  position: relative;
-  display: inline-block;
-  width: 34px;
-  height: 20px;
-}
+  <head>
+    <meta name="theme-color" content="#6bb3eb">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenny | DEV</title>
+    <meta property="og:title" content="Hey! I'm kenny 👋" />
+    <meta property="og:site_name" content="KennyDEV" />
+    <meta property="og:url" content="https://kenny.is-a.dev" />
+    <meta property="og:description" content="This is my personal website, including all  my projects, an about me, and contact info! :D" />
+    <meta property="og:image" content="https://kenny.is-a.dev/assets/images/kenny-profile.png" />
+    <meta property="og:image:secure_url" content="https://kenny.is-a.dev/assets/images/kenny-profile.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Kenny Bugeja" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/tablet.css"
+      media="screen and (min-width: 55em)"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/desktop.css"
+      media="screen and (min-width: 65em)"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <script defer src="main.js"></script>
+  </head>
 
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <nav class="nav bd-grid">
+        <div>
+          <h1 class="header__logo">
+            Kenny<span class="header__logo--light">DEV</span>
+          </h1>
+        </div>
+        <!-- ===== NAVIGATION ===== -->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link"> Home </a>
+            </li>
+            <li class="nav__item">
+              <a href="#work" class="nav__link"> Work </a>
+            </li>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link"> Skills </a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link"> About </a>
+            </li>
+          </ul>
+        </div>
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-  border-radius: 20px;
-}
+        <button
+          class="menu-btn"
+          aria-label="Navigation menu"
+          aria-expanded="false"
+        >
+          <div class="menu-btn__icon"></div>
+        </button>
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 14px;
-  width: 14px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  transition: 0.4s;
-  border-radius: 50%;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:checked + .slider:before {
-  transform: translateX(14px);
-}
-
-/* Dark theme styles */
-.dark-theme {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-.dark-theme .header__logo--light {
-  color: #ffffff;
-}
-
-.dark-theme a.nav__link {
-  color: #ffffff;
-}
-
-.dark-theme .skills__bar {
-  background-color: #444444;
-}
-
-.dark-theme .footer {
-  background-color: #1a1a1a;
-}
-  </style>
-  <script defer src="main.js"></script>
-</head>
-
-<body>
-  <!-- ===== HEADER ===== -->
-  <header class="header">
-    <nav class="nav bd-grid">
-      <div>
-        <h1 class="header__logo">
-          Kenny<span class="header__logo--light">DEV</span>
-        </h1>
-      </div>
-      <!-- ===== NAVIGATION ===== -->
-      <div class="nav__menu" id="nav-menu">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#home" class="nav__link"> Home </a>
+        <!-- ===== THEME SWITCHER ===== -->
+        <div class="theme-switcher">
+          <input type="checkbox" id="theme-toggle" aria-label="Theme switcher">
+          <label for="theme-toggle">Dark Mode</label>
+        </div>
+      </nav>
+    </header>
+    <!-- ===== MAIN NAVIGATOR SECTIONS ===== -->
+    <main>
+      <section class="hero bd-grid" id="home">
+        <div class="hero-description">
+          <h2 class="hero-description__title">
+            <span>Hey ! <span class="wave">👋</span></span>
+            <br />
+            I’m <span class="text-primary">Kenny Bugeja</span>
+          </h2>
+          <p class="hero-description__subtitle">
+            <span class="text-primary text-primary--bold"
+              >A frontend developer</span
+            >
+            + more.
+			 I build beautiful and functional user interfaces,
+            whilst writing clean and efficient code.
+          </p>
+        </div>
+        <ul class="hero-social">
+          <li>
+            <a
+              href="https://discord.com/users/681811851428102145"
+              target="_blank"
+              rel="noopener nofollow"
+              aria-label="Message me on Discord"
+            >
+              <i class="bx bxl-discord-alt hero-social-icon"></i>
+            </a>
           </li>
-          <li class="nav__item">
-            <a href="#work" class="nav__link"> Work </a>
-          </li>
-          <li class="nav__item">
-            <a href="#skills" class="nav__link"> Skills </a>
-          </li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link"> About </a>
+          <li>
+            <a
+              href="https://github.com/KennySB-dev"
+              target="_blank"
+              rel="noopener nofollow"
+              aria-label="Check out my Github"
+            >
+              <i class="bx bxl-github hero-social-icon"></i>
+            </a>
           </li>
         </ul>
-      </div>
-      <button class="menu-btn" aria-label="Navigation menu" aria-expanded="false">
-        <div class="menu-btn__icon"></div>
-      </button>
-      <div class="theme-switcher">
-        <label class="switch">
-          <input type="checkbox" id="theme-toggle">
-          <span class="slider round"></span>
-        </label>
-      </div>
-    </nav>
-  </header>
-  <!-- ===== MAIN NAVIGATOR SECTIONS ===== -->
-  <main>
-  </main>
+        <img
+          src="assets/images/kenny-profile.png"
+          alt="Kenny Bugeja"
+          class="hero__img"
+        />
+      </section>
 
-  <!--===== Footer =====-->
-  <footer class="footer" id="footer">
-    <div class="footer-content">
-      <p class="header__logo">
-        Kenny<span class="header__logo--light">DEV</span>
-      </p>
-      <div class="footer__social">
-        <a href="https://discord.com/users/681811851428102145" target="_blank">
-          <i class="bx bxl-discord-alt footer__social-icon"></i>
-        </a>
-        <a href="https://github.com/KennySB-dev" target="_blank">
-          <i class="bx bxl-github footer__social-icon"></i>
-        </a>
+      <!--===== Project =====-->
+      <section class="work section" id="work">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-container bd-grid">
+          <figure class="project-card">
+            <h3 class="project-card__title">Zync Discord Bot</h3>
+            <div class="project-picture">
+              <img
+                src="./assets/images/zync-web.png"
+                alt="Zync"
+              />
+            </div>
+            <div class="project-description">
+              <p class="project-description__text">
+                Node.js, HTML/CSS3 (WEB USAGE)
+                <br />
+                I got sick and tired of seeing servers with 12 bots
+				just to do simple tasks, so I decided to create a
+				revolutionary Discord Bot, which includes all
+				your needs in one bot!
+		                For a command list, please check the "/help"
+                                command, as the image above isn't updated.
+              </p>
+            </div>
+            <div class="project-links">
+              <a
+                target="_blank"
+                rel="noopener nofollow"
+		href="https://zync.kennysb.xyz"
+                class="project-links__anchor"
+              >
+                <i class="bx bx-link-external project-icon"></i>
+                Site
+              </a>
+              <a
+                target="_blank"
+                rel="noopener nofollow"
+		href="https://github.com/KennySB-dev/zync"
+                class="project-links__anchor"
+              >
+                <i class="bx bx-folder project-icon"></i>
+                Repository
+              </a>
+            </div>
+          </figure>
+        </div>
+      </section>
+	  
+      <!--===== Skills =====-->
+      <section class="skills section" id="skills">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills__container bd-grid">
+          <div>
+            <h2 class="skills__subtitle">Profesional Skills</h2>
+            <p class="skills__text" data-sr-id="19">
+              These skills allow me to create responsive, interactive, and
+              user-friendly interfaces. I am currently learning Backend,
+              mastering JavaScript based frameworks and libraries.
+            </p>
+
+           <div class="skills__data" data-sr-id="21">
+              <div class="skills__names">
+                <i class="bx bxl-html5 skills__icon"></i>
+                <span class="skills__name">HTML5</span>
+              </div>
+
+              <div class="skills__bar skills__html"></div>
+            </div>
+			
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-nodejs skills__icon"></i>
+                <span class="skills__name">NODEJS</span>
+              </div>
+			  
+              <div class="skills__bar skills__js"></div>
+            </div>
+			
+			<div class="skills__data" data-sr-id="21">
+              <div class="skills__names">
+                <i class="bx bxl-python skills__icon"></i>
+                <span class="skills__name">PYTHON</span>
+              </div>
+
+              <div class="skills__bar skills__js"></div>
+            </div>
+			
+			<div class="skills__data" data-sr-id="21">
+              <div class="skills__names">
+                <i class="bx bxl-typescript skills__icon"></i>
+                <span class="skills__name">TYPESCRIPT</span>
+              </div>
+
+              <div class="skills__bar skills__js"></div>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-react skills__icon"></i>
+                <span class="skills__name">REACTJS</span>
+              </div>
+
+              <div class="skills__bar skills__js"></div>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-javascript skills__icon"></i>
+                <span class="skills__name">NEXTJS</span>
+              </div>
+
+              <div class="skills__bar skills__react"></div>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-css3 skills__icon"></i>
+                <span class="skills__name">CSS3</span>
+              </div>
+
+              <div class="skills__bar skills__react"></div>
+            </div>
+          </div>
+
+          <div class="skills__img">
+            <img
+              src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+              alt="Skills"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!--===== About me =====-->
+      <section class="about section" id="about">
+        <h2 class="section-title">About</h2>
+
+        <div class="about__container bd-grid">
+          <div>
+            <h2 class="about__subtitle">I am Kenny</h2>
+            <p class="about__text">
+			I am a self taught developer, which makes a bunch of different things,
+			if you want to contact me, DM me on discord using the discord links provided.
+          </div>
+        </div>
+      </section>
+
+    <!--===== Footer =====-->
+    <footer class="footer" id="footer">
+      <div class="footer-content">
+        <p class="header__logo">
+          Kenny<span class="header__logo--light">DEV</span>
+        </p>
+
+        <div class="footer__social">
+          <a
+            href="https://discord.com/users/681811851428102145"
+            target="_blank"
+            ><i class="bx bxl-discord-alt footer__social-icon"></i
+          ></a>
+          <a href="https://github.com/KennySB-dev" target="_blank"
+            ><i class="bx bxl-github footer__social-icon"></i
+          ></a>
+        </div>
+        <p class="footer-description">Made with 🧡 by Kenny.</p>
       </div>
-      <p class="footer-description">Made with 🧡 by Kenny.</p>
-    </div>
-  </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-  const toggleSwitch = document.querySelector('#theme-toggle');
-  const currentTheme = localStorage.getItem('theme') || 'light';
-
-  if (currentTheme === 'dark') {
-    document.body.classList.add('dark-theme');
-    toggleSwitch.checked = true;
-  }
-
-  toggleSwitch.addEventListener('change', function (e) {
-    if (e.target.checked) {
-      document.body.classList.add('dark-theme');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.body.classList.remove('dark-theme');
-      localStorage.setItem('theme', 'light');
-    }
-  });
-});
-  </script>
-</body>
+    </footer>
+  </body>
 </html>

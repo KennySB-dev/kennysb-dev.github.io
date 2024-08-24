@@ -142,11 +142,11 @@ a {
 
 /* Navigation link colors */
 .nav__link {
-  color: var(--nav-link-color);
+  background-color: var(--nav-link-color);
 }
 
 .nav__link:hover {
-  color: var(--link-color);
+  background-color: var(--link-color);
 }
 
 /* Navigation buttons color in dark mode */

@@ -115,7 +115,7 @@ img{max-width:100%;height:auto}
   --link-color: #6a8ef9; /* Updated blue color */
   --header-background-color: #000000;
   --footer-background-color: #051b26; /* Updated color */
-  --nav-link-color: #ffffff; /* Navigation links color in dark mode */
+  --nav-link-color: #FFF; /* Navigation links color in dark mode */
   --scrollbar-thumb-color: #6a8ef9; /* Updated blue color for scrollbar */
   --wave-color: #6a8ef9; /* Updated blue color for wave animation */
 }
@@ -142,7 +142,7 @@ a {
 
 /* Navigation link colors */
 .nav__link {
-  background-color: var(--nav-link-color);
+  color: var(--nav-link-color);
 }
 
 .nav__link:hover {

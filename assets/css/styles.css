@@ -90,7 +90,7 @@ img{max-width:100%;height:auto}
   --header-background-color: #ffffff;
   --footer-background-color: #0e2431; /* Default footer color */
   --nav-link-color: #0e2431; /* Default nav link color */
-  --scrollbar-thumb-color: #0571f8; /* Default scrollbar color */
+/*  --scrollbar-thumb-color: #0571f8; Default scrollbar color */
   --wave-color: #0571f8; /* Default wave color */
 }
 

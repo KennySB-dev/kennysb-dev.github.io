@@ -56,7 +56,7 @@ async function updatePresence() {
     );
     if (codeAct) {
       coding.classList.add("active");
-      const detail = codeAct.details || codeAct.state || "";
+      const detail = codeAct.details + codeAct.state || codeAct.details || codeAct.state || "";
       coding.innerHTML = `
         <i class="bx bx-code-alt"></i>
         <div class="activity-detail">

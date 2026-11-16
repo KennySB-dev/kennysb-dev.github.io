@@ -1,7 +1,5 @@
-/* KennyDEV — minimal profile (alyosha-inspired) */
-
 :root {
-  --bg: #0a0c12;
+  --bg: #151415;
   --bg-card: rgba(18, 22, 32, 0.82);
   --bg-elevated: rgba(28, 32, 44, 0.9);
   --text: #e8eaef;
@@ -42,14 +40,21 @@ body {
   position: relative;
 }
 
-/* Full-page photo background */
 .bg-layer {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background:
-    linear-gradient(180deg, rgba(8, 10, 16, 0.72) 0%, rgba(8, 10, 16, 0.85) 100%),
-    url("../images/bg.jpg") center / cover no-repeat;
+  background: #151415;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.night-sky-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
   pointer-events: none;
 }
 
@@ -57,7 +62,6 @@ a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 ul { margin: 0; padding: 0; list-style: none; }
 
-/* ========== PROFILE (home) ========== */
 .profile {
   position: relative;
   z-index: 1;
@@ -243,7 +247,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 .social-discord:hover { color: #5865F2; }
 .social-github:hover { color: #fff; }
 
-/* ========== 88x31 web buttons ========== */
 .badge-bar {
   position: fixed;
   bottom: 0;
@@ -297,8 +300,6 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
 }
 
-/* ========== PROJECTS PAGE ========== */
-/* Floating back arrow — no header bar */
 .back-arrow {
   position: fixed;
   top: 1.4rem;
